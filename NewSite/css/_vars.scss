@@ -1,0 +1,15 @@
+$justify: center;
+$width: 0;
+$height: 0;
+$font: Lato;
+
+@mixin flex_properties($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin dimensions ($width, $height) {
+    width: $width;
+    height: $height;
+}

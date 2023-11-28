@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <title>Product page</title>
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <div class="logo_and_search">
+                <img src="../img/logo.png" class="logo" alt="logo">
+                <img src="../img/search.png" class="search" alt="search">
+            </div>
+            <div class="header_buttons">
+                <img src="../img/menu/burger.png" class="menu_image_burger" alt="burger menu">
+                <img src="../img/menu/cabinet.png" class="menu_image_cabinet" alt="cabinet">
+                <img src="../img/menu/basket.png" class="menu_image_basket" alt="backet">
+                <div class="quantity_products">5</div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_container">
+                <div class="header_bottom_menu">
+                    <p class="new_arrivals">NEW ARRIVALS</p>
+                    <p><a href="#">HOME</a> / <a href="#">MENU</a> / NEW ARRIVALS</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/product/slider.png" alt="slider"></div>
+            <div class="swiper-slide"><img src="../img/product/slider.png" alt="slider"></div>
+            <div class="swiper-slide"><img src="../img/product/slider.png" alt="slider"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <section class="product_description">
+        <h2>WOMEN COLLECTION</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="63" height="4" viewBox="0 0 63 4" fill="none">
+            <path d="M63 0.786865H0V3.81225H63V0.786865Z" fill="#EF5B70"/>
+        </svg>
+        <h1>MOSCHINO CHEAP AND CHIC</h1>
+        <p class="product_desc">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
+        <p class="number">$561</p>
+        <div class="choose_product">
+            <p>CHOOSE COLOR<img src="../img/product/choose_arrow.png" class="choose_arrow" alt="choose arrow"></p>
+            <p>CHOOSE SIZE<img src="../img/product/choose_arrow.png" class="choose_arrow" alt="choose arrow"></p>
+            <p>QUANTITY<img src="../img/product/choose_arrow.png" class="choose_arrow" alt="choose arrow"></p>
+        </div>
+        <button type="button" class="add_to_cart"><img src="../img/product/add_to_cart.png" alt="add to cart">Add to Cart</button>
+    </section>
+
+    <div class="products_grid">
+        <div class="products_grid_item">
+            <img src="../img/product4.png" alt="product4">
+            <div class="subscription">
+                <h4>ELLERY X M'O CAPSULE</h4>
+                <p class="desc">Known for her sculptural takes on traditional tailoring, Australian  arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                <div class="price">$52.00</div>
+            </div>
+        </div>
+        <div class="products_grid_item">
+            <img src="../img/product3.png" alt="product3">
+            <div class="subscription">
+                <h4>ELLERY X M'O CAPSULE</h4>
+                <p class="desc">Known for her sculptural takes on traditional tailoring, Australian  arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                <div class="price">$52.00</div>
+            </div>
+        </div>
+        <div class="products_grid_item">
+            <img src="../img/product6.png" alt="product6">
+            <div class="subscription">
+                <h4>ELLERY X M'O CAPSULE</h4>
+                <p class="desc">Known for her sculptural takes on traditional tailoring, Australian  arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                <div class="price">$52.00</div>
+            </div>
+        </div>
+    </div>
+    <section class="subscribe">
+        <div class="sub_left">
+            <img src="../img/face.png" alt="face">
+            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+        </div>
+        <div class="sub_right">
+            <h3>SUBSCRIBE <br> <span class="sub_subscribe"> FOR OUR NEWLETTER AND PROMOTION</span></h3>
+            <form>
+                <input type="text" placeholder="Enter your email">
+                <button type="submit" class="sub_btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>© 2022  Brand  All Rights Reserved.</p>
+        <ul class="social_nets">
+            <li><a href=""#><img src="../img/social_nets/facebook.jpg" class="social_net" alt="facebook"></a></li>
+            <li><a href=""#><img src="../img/social_nets/instagram.png" class="social_net" alt="instagram"></a></li>
+            <li><a href=""#><img src="../img/social_nets/pineterest.jpg" class="social_net" alt="pinterest"></a></li>
+            <li><a href=""#><img src="../img/social_nets/tweater.jpg" class="social_net" alt="tweater"></a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
