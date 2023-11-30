@@ -1,0 +1,236 @@
+@import "vars";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  @include dimensions(100%, 223px);
+  margin-bottom: 1px;
+  background-color: #222;;
+
+  .header_top {
+    @include flex_properties(space-between);
+    @include dimensions(1150px, 75px);
+    margin: 0 auto;
+
+    .logo {
+      @include dimensions(44px, 38px);
+      margin-right: 41px;
+    }
+
+    .search {
+      width: 26px;
+    }
+
+    .header_buttons {
+      @include flex_properties(flex-start);
+      position: relative;
+      gap: 33px;
+      @include dimensions(169px, 38px);
+
+      .menu_image_burger {
+        @include dimensions(32px, 23px);
+      }
+
+      .menu_image_cabinet {
+        @include dimensions(29px, 29px);
+      }
+
+      .menu_image_basket {
+        @include dimensions(32px, 29px);
+      }
+
+      .quantity_products {;
+        @include flex_properties($justify);
+        position: absolute;
+        top: -5px;
+        left: 150px;
+        @include dimensions(19px, 19px);
+        border-radius: 50%;
+        background-color: #F16D7F;
+        color: #FFF;
+        font-family: $font;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .header_bottom {
+    @include dimensions(100%, 148px);
+    background-color: #F8F3F4;
+
+    .header_bottom_container {
+      @include dimensions(1600px, 148px);
+      margin: 0 auto;
+      border: 1px solid #EAEAEA;
+
+      .header_bottom_menu {
+        @include flex_properties(space-between);
+        @include dimensions(1140px, 148px);
+        margin: 0 auto;
+
+        .new_arrivals {
+          color: #F16D7F;
+          font-family: $font;
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        a {
+          color: #636363;
+          font-family: $font;
+          font-size: 14px;
+          font-weight: 300;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.filter_sorter {
+  position: relative;
+  @include dimensions(1140px, 132px);
+  margin: 0 auto;
+
+  .filter {
+    position: relative;
+    top: 51px;
+    width: 360px;
+    padding: 13px 16px 16px;
+  }
+
+  .filter[open] {
+    background-color: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
+
+    .filter_summary {
+      color: #EF5B70;
+    }
+
+    path {
+      fill: #EF5B70;
+    }
+
+    .filter_item {
+      margin-top: 16px;
+
+      .filter_heading {
+        padding: 8px 11px 11px 11px;
+        list-style: none;
+        font-family: $font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+        border-left: 5px solid #EF5B70;
+      }
+
+      .filter_link_box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+
+        .filter_link {
+          color: #6F6E6E;
+          font-family: $font;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .filter_summary {
+    list-style: none;
+  }
+
+  span {
+    margin-left: 11px;
+  }
+}
+
+
+.sort {
+  display: flex;
+  position: absolute;
+  top: 51px;
+  left: 490px;
+  width: 400px;
+
+  .sort_details {
+    margin-right: 16px;
+  }
+
+  .size {
+    width: 79px;
+
+    .size_box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 7px 30px 11px 9px;
+      background-color: #FFFFFF;
+    }
+  }
+
+  .sort_summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  span {
+    margin-right: 10px;
+    color: #6F6E6E;
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+}
+
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-template-rows: 581px;
+  justify-content: center;
+  gap: 30px;
+  width: 1200px;
+  margin: 0 auto  48px;
+  background: #FFF;
+
+  .subscription {
+    padding: 24px 28px 20px 18px;
+
+    .subscription h4 {
+      margin-bottom: 16px;
+      color: #000;
+      font-family: $font;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .desc {
+      margin-bottom: 18px;
+      color: #5D5D5D;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .price {
+      color: #F16D7F;
+      font-family: $font;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}

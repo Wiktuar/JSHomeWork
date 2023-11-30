@@ -1,0 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 223px;
+  margin-bottom: 1px;
+  background-color: #222;
+}
+header .header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1150px;
+  height: 75px;
+  margin: 0 auto;
+}
+header .header_top .logo {
+  width: 44px;
+  height: 38px;
+  margin-right: 41px;
+}
+header .header_top .search {
+  width: 26px;
+}
+header .header_top .header_buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 33px;
+  width: 169px;
+  height: 38px;
+}
+header .header_top .header_buttons .menu_image_burger {
+  width: 32px;
+  height: 23px;
+}
+header .header_top .header_buttons .menu_image_cabinet {
+  width: 29px;
+  height: 29px;
+}
+header .header_top .header_buttons .menu_image_basket {
+  width: 32px;
+  height: 29px;
+}
+header .header_top .header_buttons .quantity_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  left: 150px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #F16D7F;
+  color: #FFF;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+}
+header .header_bottom {
+  width: 100%;
+  height: 148px;
+  background-color: #F8F3F4;
+}
+header .header_bottom .header_bottom_container {
+  width: 1600px;
+  height: 148px;
+  margin: 0 auto;
+  border: 1px solid #EAEAEA;
+}
+header .header_bottom .header_bottom_container .header_bottom_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1140px;
+  height: 148px;
+  margin: 0 auto;
+}
+header .header_bottom .header_bottom_container .header_bottom_menu .new_arrivals {
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+}
+header .header_bottom .header_bottom_container .header_bottom_menu a {
+  color: #636363;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.filter_sorter {
+  position: relative;
+  width: 1140px;
+  height: 132px;
+  margin: 0 auto;
+}
+.filter_sorter .filter {
+  position: relative;
+  top: 51px;
+  width: 360px;
+  padding: 13px 16px 16px;
+}
+.filter_sorter .filter[open] {
+  background-color: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter_sorter .filter[open] .filter_summary {
+  color: #EF5B70;
+}
+.filter_sorter .filter[open] path {
+  fill: #EF5B70;
+}
+.filter_sorter .filter[open] .filter_item {
+  margin-top: 16px;
+}
+.filter_sorter .filter[open] .filter_item .filter_heading {
+  padding: 8px 11px 11px 11px;
+  list-style: none;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  border-left: 5px solid #EF5B70;
+}
+.filter_sorter .filter[open] .filter_item .filter_link_box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 24px 16px;
+}
+.filter_sorter .filter[open] .filter_item .filter_link_box .filter_link {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+}
+.filter_sorter .filter_summary {
+  list-style: none;
+}
+.filter_sorter span {
+  margin-left: 11px;
+}
+
+.sort {
+  display: flex;
+  position: absolute;
+  top: 51px;
+  left: 490px;
+  width: 400px;
+}
+.sort .sort_details {
+  margin-right: 16px;
+}
+.sort .size {
+  width: 79px;
+}
+.sort .size .size_box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 7px 30px 11px 9px;
+  background-color: #FFFFFF;
+}
+.sort .sort_summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sort span {
+  margin-right: 10px;
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-template-rows: 581px;
+  justify-content: center;
+  gap: 30px;
+  width: 1200px;
+  margin: 0 auto 48px;
+  background: #FFF;
+}
+.products_grid .subscription {
+  padding: 24px 28px 20px 18px;
+}
+.products_grid .subscription .subscription h4 {
+  margin-bottom: 16px;
+  color: #000;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+}
+.products_grid .subscription .desc {
+  margin-bottom: 18px;
+  color: #5D5D5D;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+}
+.products_grid .subscription .price {
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=catalog.css.map */
