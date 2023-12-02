@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fonts/stylesheet.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+    <title>Cart</title>
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="logo_and_search">
+            <img src="../img/logo.png" class="logo" alt="logo">
+            <img src="../img/search.png" class="search" alt="search">
+        </div>
+        <div class="header_buttons">
+            <img src="../img/menu/burger.png" class="menu_image_burger" alt="burger menu">
+            <img src="../img/menu/cabinet.png" class="menu_image_cabinet" alt="cabinet">
+            <img src="../img/menu/basket.png" class="menu_image_basket" alt="backet">
+            <div class="quantity_products">5</div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <div class="header_bottom_container">
+            <div class="header_bottom_menu">
+                <p class="SHOPPING CART">NEW ARRIVALS</p>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="cart_content">
+    <div class="cart">
+        <div class="cart_list">
+            <div class="product_in_cart">
+                <img src="../img/product1.jpg" alt="product1">
+                <div class="cart_description">
+                    <h3>MANGO PEOPLE<br> T-SHIRT</h3>
+                    <ul>
+                        <li>Price $300</li>
+                        <li>Color: Red</li>
+                        <li>Size: XI</li>
+                        <li>Quantity: <input type="number" value="2"> </li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" fill="#575757"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="product_in_cart">
+                <img src="../img/product5.png" alt="product5">
+                <div class="cart_description">
+                    <h3>MANGO PEOPLE<br> T-SHIRT</h3>
+                    <ul>
+                        <li>Price $300</li>
+                        <li>Color: Red</li>
+                        <li>Size: XI</li>
+                        <li>Quantity: <input type="number" value="2"> </li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" fill="#575757"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="cart_buttons">
+            <button type="button">CLEAR SHOPPING CART</button>
+            <button type="button">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+    <div class="send_cart">
+        <form>
+            <h2>SHIPPING ADRESS</h2>
+            <input type="text" placeholder="Bangladesh">
+            <input type="text" placeholder="State">
+            <input type="text" placeholder="Bangladesh">
+            <button type="button">GET A QUOTE</button>
+        </form>
+        <div class="price">
+            <div class="summa">
+                <p>SUB TOTAL $900</p>
+                <p>GRAND TOTAL $900</p>
+            </div>
+            <button type="button" class="proceed">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+</main>
+<section class="subscribe">
+    <div class="sub_left">
+        <img src="../img/face.png" alt="face">
+        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+    </div>
+    <div class="sub_right">
+        <h3>SUBSCRIBE <br> <span class="sub_subscribe"> FOR OUR NEWLETTER AND PROMOTION</span></h3>
+        <form>
+            <input type="text" placeholder="Enter your email">
+            <button type="submit" class="sub_btn">Subscribe</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <p>© 2022  Brand  All Rights Reserved.</p>
+    <ul class="social_nets">
+        <li><a href=""#><img src="../img/social_nets/facebook.jpg" class="social_net" alt="facebook"></a></li>
+        <li><a href=""#><img src="../img/social_nets/instagram.png" class="social_net" alt="instagram"></a></li>
+        <li><a href=""#><img src="../img/social_nets/pineterest.jpg" class="social_net" alt="pinterest"></a></li>
+        <li><a href=""#><img src="../img/social_nets/tweater.jpg" class="social_net" alt="tweater"></a></li>
+    </ul>
+</footer>
+</body>
+</html>

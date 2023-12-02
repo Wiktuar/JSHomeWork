@@ -81,6 +81,16 @@ header {
           font-weight: 400;
         }
 
+        .bread_crumbs li{
+          display: inline-block;
+          list-style-type: none;
+        }
+
+        .bread_crumbs li:not(last-child)::after {
+          content: "/";
+          padding: 0 5px;
+        }
+
         a {
           color: #636363;
           font-family: $font;
@@ -92,6 +102,150 @@ header {
     }
   }
 }
+
+//styles for cart
+
+  .cart_content {
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    padding-top: 96px;
+    background-color: white;
+
+    img {
+      @include dimensions(263px, 306px);
+    }
+
+    .product_in_cart {
+      @include flex_properties(flex-start);
+      width: 652px;
+      margin-bottom: 40px;
+      box-shadow: 17px 19px 24px 0 #00000021;
+
+      .cart_description {
+        position: relative;
+        padding: 22px 97px 62px 31px;
+
+        h3 {
+          margin-bottom: 42px;
+          color: #222;
+          font-family: $font;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        ul li{
+          list-style-type: none;
+          margin-bottom: 6px;
+          color: #575757;
+          font-family: $font;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          input {
+            display: inline-block;
+            margin-left: 24px;
+            @include dimensions(44px, 24px);
+            text-align: center;
+            color: #656565;
+            font-family: $font;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+
+        svg {
+          position: absolute;
+          top: 28px;
+          left: 350px;
+        }
+      }
+    }
+
+    .cart_buttons{
+      @include flex_properties(space-between);
+      max-width: 652px;
+
+      button {
+        padding: 1rem 2rem;
+        background-color: #FFFFFF;
+        color: #000;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;;
+        color: #000;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+    .send_cart {
+      padding-top: 17px;
+      padding-left: 128px;
+
+      h2 {
+        margin-bottom: 21px;
+        color: #222;
+        font-family: $font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+
+      input {
+        display: block;
+        margin-bottom: 21px;
+        min-width: 360px;
+        height: 45px;
+      }
+
+      button {
+        margin-bottom: 57px;
+        padding: 12px 15px;
+        color: #4A4A4A;
+        font-family: $font;
+        font-size: 11px;
+        font-weight: 300;
+      }
+
+      .price {
+        background-color:  #F5F3F3;
+        padding: 39px 34px 42px 44px;
+
+        .summa {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 12px;
+          margin-bottom: 40px;
+
+          p {
+            color: #222;
+            font-family: $font;
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+
+        .proceed {
+          background-color: #F16D7F;
+          color: #FFF;
+          font-family: $font;
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
 
 .filter_sorter {
   position: relative;
@@ -200,7 +354,7 @@ header {
 .products_grid {
   display: grid;
   grid-template-columns: repeat(3, 360px);
-  grid-template-rows: 581px;
+  grid-template-rows: repeat(3, 581px);
   justify-content: center;
   gap: 30px;
   width: 1200px;
@@ -231,6 +385,135 @@ header {
       font-family: $font;
       font-size: 16px;
       font-weight: 400;
+    }
+  }
+}
+
+.adv_section {
+  @include flex_properties($justify);
+  gap: 30px;
+  @include dimensions(1600px, 341px);
+  margin: 0 auto;
+  background-color: #222224;
+
+  .advantages {
+    @include flex_properties(flex-start);
+    flex-direction: column;
+    gap: 17px;
+    @include dimensions(360px, 134px);
+
+    .advantages img {
+      display: block;
+      width: 45px;
+    }
+
+    .adv_header {
+      color: #FBFBFB;
+      font-family: $font;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .adv_description {
+      padding: 0 10px;
+      color: #FBFBFB;
+      text-align: center;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+
+.subscribe {
+  @include flex_properties($justify);
+  gap: 223px;
+  margin: 0 auto;
+  @include dimensions(1600px, 448px);
+  background-color: #F4F4F4B2;
+
+  .sub_left {
+    @include flex_properties(flex-start);
+    flex-direction: column;
+    gap: 30px;
+    @include dimensions(360px, 225px);
+
+    .sub_left p {
+      text-align: center;
+    }
+  }
+
+  .sub_right {
+    @include flex_properties(flex-start);
+    flex-direction: column;
+    @include dimensions(557px, 142px);
+
+    .sub_right h3 {
+      text-align: center;
+
+      .sub_subscribe {
+        font-size: 14px;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+
+      input {
+        @include dimensions(256px, 49px);
+        background-color: #E1E1E1;
+        border: none;
+        border-radius: 25px 0 0 25px;
+      }
+
+      input[type=text]::placeholder {
+        padding-left: 22px;
+        color: #222224;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .sub_btn {
+        @include dimensions(100px, 49px);
+        background-color: #F16D7F;
+        border-radius: 0 25px 25px 0;
+        border: none;
+      }
+    }
+  }
+}
+
+footer {
+  @include dimensions(1600px, 79px);
+  margin: 0 auto;
+  background-color: #222224;
+
+  p {
+    display: inline-block;
+    margin: 30px 0 30px 235px;
+    color: #FBFBFB;
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .social_nets {
+    margin-left: 665px;
+    display: inline-block;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      margin-right: 8px;
+
+      a {
+        @include flex_properties($justify);
+        width: 32px;
+        height: 32px;
+        background-color: white;
+      }
     }
   }
 }
