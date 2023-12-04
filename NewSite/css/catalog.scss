@@ -74,7 +74,7 @@ header {
         @include dimensions(1140px, 148px);
         margin: 0 auto;
 
-        .new_arrivals {
+        .new_arrivals, .shopping_cart, .registration {
           color: #F16D7F;
           font-family: $font;
           font-size: 24px;
@@ -174,12 +174,6 @@ header {
         padding: 1rem 2rem;
         background-color: #FFFFFF;
         color: #000;
-        font-family: Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;;
-        color: #000;
         font-family: $font;
         font-size: 14px;
         font-weight: 300;
@@ -242,6 +236,102 @@ header {
           font-size: 16px;
           font-weight: 300;
         }
+      }
+    }
+  }
+
+//  styles for registration
+
+  .registration_content {
+    display: flex;
+    gap: 128px;
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 64px 0 96px;
+
+    h3 {
+      margin-bottom: 21px;
+      color: #222;
+      font-family: $font;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    input[type=text] {
+      display: block;
+      margin-bottom: 21px;
+      @include dimensions(360px, 45px);
+    }
+
+    input::placeholder {
+      padding-top: 13px;
+      padding-left: 17px;
+      color: #B1B1B1;
+      font-family: $font;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+
+    .radio_btn {
+      display: inline-block;
+      margin-bottom: 33px;
+      width: 17px;
+      margin-right: 4px;
+    }
+
+    label {
+      display: inline-block;
+      margin-right: 7px;
+      color: #000;
+      font-family: $font;
+      font-size: 11px;
+      font-weight: 300;
+    }
+
+    p {
+      width: 360px;
+      margin-bottom: 39px;
+      color: #B1B1B1;
+      font-family: $font;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    button {
+      padding: 17px 30px;
+      background-color: #F16D7F;
+      color: #FFF;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 400;
+
+      img {
+        display: inline-block;
+        margin-left: 10px;
+        width: 17px;
+      }
+    }
+
+    .perks {
+      h3, .perks_description, li {
+        width: 652px;
+        color: #000;
+        font-family: $font;
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      ul li {
+        list-style-type: none;
+        margin-bottom: 16px;
+      }
+
+      ul li::before {
+        content: url("../img/li_arrow.png");
+        display: inline-block;
+        margin-right: 8px;
       }
     }
   }
