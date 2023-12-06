@@ -86,13 +86,14 @@ header {
           list-style-type: none;
         }
 
-        .bread_crumbs li:not(last-child)::after {
+        .bread_crumbs li:not(:last-child):after {
           content: "/";
           padding: 0 5px;
+          color: #636363;
         }
 
         a {
-          color: #636363;
+          color: #F16D7F;
           font-family: $font;
           font-size: 14px;
           font-weight: 300;
@@ -398,48 +399,49 @@ header {
   span {
     margin-left: 11px;
   }
-}
 
+  .sort {
+    display: flex;
+    position: absolute;
+    top: 51px;
+    left: 490px;
+    width: 400px;
 
-.sort {
-  display: flex;
-  position: absolute;
-  top: 51px;
-  left: 490px;
-  width: 400px;
+    .sort_details {
+      margin-right: 16px;
+    }
 
-  .sort_details {
-    margin-right: 16px;
-  }
+    .size {
+      width: 79px;
 
-  .size {
-    width: 79px;
+      .size_box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 7px 30px 11px 9px;
+        background-color: #FFFFFF;
+      }
+    }
 
-    .size_box {
+    .sort_summary {
+      list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding: 7px 30px 11px 9px;
-      background-color: #FFFFFF;
+      align-items: center;
+      gap: 10px;
+    }
+
+    span {
+      margin-right: 10px;
+      color: #6F6E6E;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 400;
     }
   }
-
-  .sort_summary {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  span {
-    margin-right: 10px;
-    color: #6F6E6E;
-    font-family: $font;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
 }
+
+
+
 
 .products_grid {
   display: grid;
@@ -523,12 +525,12 @@ header {
   background-color: #F4F4F4B2;
 
   .sub_left {
-    @include flex_properties(flex-start);
+    @include flex_properties($justify);
     flex-direction: column;
     gap: 30px;
     @include dimensions(360px, 225px);
 
-    .sub_left p {
+    .quote {
       text-align: center;
     }
   }
@@ -538,7 +540,7 @@ header {
     flex-direction: column;
     @include dimensions(557px, 142px);
 
-    .sub_right h3 {
+    .subscribe_header {
       text-align: center;
 
       .sub_subscribe {
@@ -606,4 +608,323 @@ footer {
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  header {
+    .header_top {
+      @include dimensions(768px, 75px);
+      padding: 18px 32px;
+    }
+
+    .header_bottom {
+      @include dimensions(100%, 148px);
+      background-color: #F8F3F4;
+
+      .header_bottom_container {
+        @include dimensions(768px, 148px);
+
+        .header_bottom_menu {
+          @include flex_properties(space-between);
+          @include dimensions(768px, 148px);
+          padding-left: 16px;
+
+          .bread_crumbs {
+            padding-right: 16px;
+          }
+
+          .bread_crumbs li{
+            display: inline-block;
+            list-style-type: none;
+          }
+
+          .li a:not(last-child)::after {
+            content: "/";
+            padding: 0 5px;
+          }
+
+          a {
+            color: #636363;
+            font-family: $font;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: none;
+          }
+
+          .bread_crumbs:last-child {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  //styles for cart
+  .cart_content {
+    @include flex_properties($justify);
+    flex-direction: column;
+    max-width: 768px;
+    padding-top: 59px;;
+
+    .send_cart {
+      @include flex_properties($justify);
+      padding-top: 64px;
+      padding-left: 0;
+
+      h2 {
+        margin-bottom: 21px;
+        color: #222;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      input {
+        display: block;
+        margin-bottom: 21px;
+        min-width: 360px;
+        height: 45px;
+      }
+
+      button {
+        margin-bottom: 57px;
+        padding: 12px 15px;
+        color: #4A4A4A;
+        font-family: $font;
+        font-size: 11px;
+        font-weight: 300;
+      }
+
+      .price {
+        background-color:  #F5F3F3;
+        padding: 39px 34px 42px 44px;
+
+        .summa {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 12px;
+          margin-bottom: 40px;
+
+          p {
+            color: #222;
+            font-family: $font;
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+
+        .proceed {
+          background-color: #F16D7F;
+          color: #FFF;
+          font-family: $font;
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+
+  //  styles for registration
+
+  .registration_content {
+    gap: 22px;
+    max-width: 768px;
+    padding: 40px 0 96px 16px;
+
+    .perks {
+      h3, .perks_description, li {
+        width: 354px;
+        font-size: 16px;
+      }
+
+      ul li {
+        list-style-type: none;
+        margin-bottom: 16px;
+      }
+
+      ul li::before {
+        content: url("../img/li_arrow.png");
+        display: inline-block;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  //styles for filter and sorter
+
+  .filter_sorter {
+    @include dimensions(768px, 132px);
+
+    .filter {
+      width: 250px;
+    }
+
+    .filter_summary {
+      list-style: none;
+    }
+
+    span {
+      margin-left: 11px;
+    }
+
+    .sort {
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      top: 51px;
+      left: 380px;
+      width: 370px;
+
+      .sort_details {
+        margin-right: 16px;
+      }
+
+      .size {
+        width: 79px;
+
+        .size_box {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          padding: 7px 30px 11px 9px;
+          background-color: #FFFFFF;
+        }
+      }
+
+      .sort_summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      span {
+        margin-right: 10px;
+        color: #6F6E6E;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+
+
+
+
+  //style for grid in catalog.html
+  .products_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 360px);
+    grid-template-rows: repeat(4, 581px);
+    grid-auto-rows: 0;
+    overflow-y: hidden;
+    justify-content: center;
+    gap: 16px;
+    max-width: 768px;
+    background: #FFF;
+
+    .subscription {
+      padding: 24px 28px 20px 18px;
+
+      .subscription h4 {
+        margin-bottom: 16px;
+        color: #000;
+        font-family: $font;
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .desc {
+        margin-bottom: 18px;
+        color: #5D5D5D;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .price {
+        color: #F16D7F;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  //styles for advantages
+  .adv_section {
+    @include flex_properties($justify);
+    flex-direction: column;
+    gap: 30px;
+    max-width: 768px;
+    min-height: 610px;
+    padding: 0 49px;
+    .advantages {
+      @include flex_properties(flex-start);
+      flex-direction: column;
+      gap: 17px;
+      @include dimensions(360px, 134px);
+
+      .advantages img {
+        display: block;
+        width: 45px;
+      }
+
+      .adv_header {
+        color: #FBFBFB;
+        font-family: $font;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .adv_description {
+        padding: 0 10px;
+        color: #FBFBFB;
+        text-align: center;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  //subscribe block and footer
+    .subscribe {
+      flex-direction: column;
+      gap: 0;
+      max-width: 768px;
+
+      .sub_left {
+        padding-top: 64px;
+        .quote {
+          font-size: 20px;
+        }
+      }
+
+      .sub_right {
+        padding-top: 48px;
+        padding-bottom: 219px;
+
+        .subscribe_header {
+          margin-bottom: 27px;
+        }
+      }
+    }
+
+   footer {
+     @include flex_properties(space-between);
+     flex-wrap: wrap;
+     max-width: 768px;
+     padding: 0 32px;
+
+     p {
+       margin: 0;
+     }
+
+     .social_nets {
+       margin: 0;
+     }
+   }
 }

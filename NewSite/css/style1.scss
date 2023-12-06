@@ -105,68 +105,68 @@ header {
   }
 }
 
-.grid {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(3, 360px);
-  grid-template-rows: 260px 180px;
-  justify-content: center;
-  @include dimensions(1200px, 470px);
-  margin: 0 auto 96px;
-  background: #FFF;
-
-  .grid-item {
-    display: flex;
+  .grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 260px 180px;
     justify-content: center;
-    align-items: center;
-    position: relative;
-  }
+    @include dimensions(1200px, 470px);
+    margin: 0 auto 96px;
+    background: #FFF;
 
-  .grid-item:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.5);
-    z-index: 2;
-  }
+    .grid-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-  .grid-item1 {
-    background-image: url("../img/image1.png");
-  }
+    .grid-item:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 2;
+    }
 
-  .grid-item2 {
-    background-image: url("../img/image2.png");
-  }
+    .grid-item1 {
+      background-image: url("../img/image1.png");
+    }
 
-  .grid-item3 {
-    background-image: url("../img/image3.png");
-  }
+    .grid-item2 {
+      background-image: url("../img/image2.png");
+    }
 
-  .grid-item4 {
-    background-image: url("../img/image4.png");
-    grid-column: span 3;
-  }
+    .grid-item3 {
+      background-image: url("../img/image3.png");
+    }
 
-  .grid-item h3 {
-    text-align: center;
-    color: #F16D7F;
-    font-family: $font;
-    font-size: 24px;
-    font-weight: 700;
-    z-index: 3;
+    .grid-item4 {
+      background-image: url("../img/image4.png");
+      grid-column: span 3;
+    }
 
-    .sale {
-      color: #FFF;
+    .grid-item h3 {
       text-align: center;
+      color: #F16D7F;
       font-family: $font;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 24px;
+      font-weight: 700;
+      z-index: 3;
+
+      .sale {
+        color: #FFF;
+        text-align: center;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 400;
+      }
     }
   }
-}
 
 .product_headers {
   @include flex_properties($justify);
@@ -291,7 +291,7 @@ header {
     gap: 30px;
     @include dimensions(360px, 225px);
 
-    .sub_left p {
+    .quote{
       text-align: center;
     }
   }
@@ -301,7 +301,7 @@ header {
     flex-direction: column;
     @include dimensions(557px, 142px);
 
-    .sub_right h3 {
+    .subscribe_header {
       text-align: center;
 
       .sub_subscribe {
@@ -367,6 +367,149 @@ footer {
         height: 32px;
         background-color: white;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    @include dimensions(100%, 443px);
+    .header_top {
+      @include dimensions(768px, 75px);
+      padding: 18px 32px;
+    }
+
+    .header_bottom {
+      @include dimensions(100%, 368px);
+
+      .header_bottom_container {
+        @include flex_properties($justify);
+        width: 768px;
+
+        .left_block {
+          width: 50%;
+
+          .main_image {
+            @include dimensions(385px, 369px)
+          }
+        }
+
+        .right_block {
+          display: flex;
+          align-items: center;
+          width: 50%;
+
+          .main_header {
+            margin-left: 16px;
+            color: #222;
+            font-family: $font;
+            font-size: 44px;
+            font-weight: 900;
+
+            .subtitle {
+              font-size: 24px;
+
+              .subtitle_add {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //styles for grid
+  .grid {
+    gap: 20px;
+    grid-template-columns: repeat(3, 232px);
+    grid-template-rows: 167px 116px;
+    @include dimensions(768px, 373px);
+  }
+
+  //styles for product_grid
+  .products_grid {
+    grid-template-columns: repeat(2, 360px);
+    grid-template-rows: repeat(3, 581px);
+    grid-auto-rows: 0;
+    overflow-y: hidden;
+    justify-content: center;
+    gap: 16px;
+    max-width: 768px;
+  }
+
+  //styles for advantages
+  .adv_section {
+    @include flex_properties($justify);
+    flex-direction: column;
+    gap: 30px;
+    max-width: 768px;
+    min-height: 610px;
+    padding: 0 49px;
+    .advantages {
+      @include flex_properties(flex-start);
+      flex-direction: column;
+      gap: 17px;
+      @include dimensions(360px, 134px);
+
+      .advantages img {
+        display: block;
+        width: 45px;
+      }
+
+      .adv_header {
+        color: #FBFBFB;
+        font-family: $font;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .adv_description {
+        padding: 0 10px;
+        color: #FBFBFB;
+        text-align: center;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  //subscribe block and footer
+  .subscribe {
+    flex-direction: column;
+    gap: 0;
+    max-width: 768px;
+
+    .sub_left {
+      padding-top: 64px;
+      .quote {
+        font-size: 20px;
+      }
+    }
+
+    .sub_right {
+      padding-top: 48px;
+      padding-bottom: 219px;
+
+      .subscribe_header {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  footer {
+    @include flex_properties(space-between);
+    flex-wrap: wrap;
+    max-width: 768px;
+    padding: 0 32px;
+
+    p {
+      margin: 0;
+    }
+
+    .social_nets {
+      margin: 0;
     }
   }
 }

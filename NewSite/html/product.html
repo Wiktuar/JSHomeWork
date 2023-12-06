@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fonts/stylesheet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/catalog.css">
     <link rel="stylesheet" href="../css/products.css">
     <title>Product page</title>
 </head>
@@ -28,7 +28,11 @@
             <div class="header_bottom_container">
                 <div class="header_bottom_menu">
                     <p class="new_arrivals">NEW ARRIVALS</p>
-                    <p><a href="#">HOME</a> / <a href="#">MENU</a> / NEW ARRIVALS</p>
+                    <ul class="bread_crumbs">
+                        <li class="item"><a href="#">HOME</a></li>
+                        <li class="item"><a href="#">MENU</a></li>
+                        <li class="item"><a href="#">NEW ARRIVALS</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -89,10 +93,10 @@
     <section class="subscribe">
         <div class="sub_left">
             <img src="../img/face.png" alt="face">
-            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+            <p class="quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
         </div>
         <div class="sub_right">
-            <h3>SUBSCRIBE <br> <span class="sub_subscribe"> FOR OUR NEWLETTER AND PROMOTION</span></h3>
+            <h3 class="subscribe_header">SUBSCRIBE <br> <span class="sub_subscribe"> FOR OUR NEWLETTER AND PROMOTION</span></h3>
             <form>
                 <input type="text" placeholder="Enter your email">
                 <button type="submit" class="sub_btn">Subscribe</button>
