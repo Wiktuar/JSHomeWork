@@ -1,36 +1,32 @@
 //task1
-let number1 = prompt("Введите первое число");
-if(number1 <= 1)alert("Верное число!")
-
-let number2 = prompt("Введите второе число");
-if(number2 >= 1) alert("Верное число");
+let func = x => Math.pow(x, 3);
+console.log(func(3));
+console.log(func(2));
 
 //task2
+let number = prompt("Введите число");
 
-let test = true;
-(test)?console.log("+++"):console.log("----");
+(isNaN(number))?console.log("введено не число"):
+    console.log(sizeOfTax(1000));
 
-//task3
-let day = 5;
-
-if (day >= 1 & day <= 10)alert("Первая декада");
-else if (day >= 11 & day <= 20)alert("Вторая декада");
-else alert("Третья декада");
-
-
-//task4
-let num = 71;
-let data = num;
-let array = [];
-while(num>0){
-    array.unshift(num%10);
-    if(array.length === 3) break;
-    num=num/10|0;
+function sizeOfTax(number){
+    return Math.round(number - number*0.13);
 }
 
-if(array.length === 2)array.unshift(0);
+//task3
+let userString = prompt("Введите число");
+let array = userString.split(" ");
 
-console.log(`В числе ${data} количество сотен: ${array[0]}, десятков: ${array[1]}, единиц: ${array[2]}`);
+let minimum = array.map(x => +x).reduce((x, y) => Math.max(x, y));
+console.log(minimum);
 
+//task4
+let a = 15;
+let b = 25;
 
+let sum =  (a, b) => a+b;
+let diff =  (a, b) => (a > b)? a - b : b - a;
+let pow =  (a, b) => a * b;
+let div =  (a, b) => (b !== 0)? a / b: "На ноль делить нельзя" ;
 
+console.log(div(a, b));
