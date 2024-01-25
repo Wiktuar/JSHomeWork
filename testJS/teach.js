@@ -1,137 +1,38 @@
 //task1
-const numbers = {
-    keyin1: 1,
-    keyin2: 2,
-    keyin3: 3,
-    keyin4: 4,
-    keyin5: 5,
-    keyin6: 6,
-    keyin7: 7
+const arr = [1, 5, 7, 9];
+
+console.log(Math.min(...arr));
+
+// task2
+function createCounter(){
+    let count = 0;
+
+    return {
+        increment(){
+            count++;
+            return count;
+        },
+
+        decrement(){
+            if(count === 0) return 0;
+            else return --count;
+        }
+    }
 }
 
-for(let key in numbers){
-    if(numbers[key] >= 3) console.log(numbers[key]);
-}
-
-//task2
-const post = {
-    author: "John", // вывести этот текст
-    postId: 23,
-    comments: [
-        {
-            userId: 10,
-            userName: "Alex",
-            text: "lorem ipsum",
-            rating: {
-                likes: 10,
-                dislikes: 2, // вывести это число
-            },
-        },
-        {
-            userId: 5, // вывести это число
-            userName: "Jane",
-            text: "lorem ipsum 2", // вывести этот текст
-            rating: {
-                likes: 3,
-                dislikes: 1,
-            },
-        },
-    ],
-};
-
-console.log(post.author);
-console.log(post.comments[0].rating.dislikes);
-console.log(post.comments[0].text);
-
+const counter = createCounter();
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.decrement());
 
 //task3
-const products = [
-    {
-        id: 3,
-        price: 200,
-    },
-    {
-        id: 4,
-        price: 900,
-    },
-    {
-        id: 1,
-        price: 1000,
-    },
-];
 
-products.forEach(p => console.log(p.price*0.85));
+let stroka = "";
 
-//task4
-const products = [
-    {
-        id: 3,
-        price: 127,
-        photos: [
-            "1.jpg",
-            "2.jpg",
-        ],
-    },
-    {
-        id: 5,
-        price: 499,
-        photos: [],
-    },
-    {
-        id: 10,
-        price: 26,
-        photos: [
-            "3.jpg",
-        ],
-    },
-    {
-        id: 8,
-        price: 78,
-    },
-];
-
-products.filter(p => p.photos !== undefined && p.photos.length > 0).forEach(p => console.log(p));
-products.sort((p1, p2)=> p1.price - p2.price);
-
-//task5
-const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
-
-let daysOfWeek = {}
-
-for (let i = 0; i < en.length; i++) {
-    daysOfWeek[en[i]] = ru[i];
-}
-let number1 = prompt("Введите первое число");
-if(number1 <= 1)alert("Верное число!")
-
-let number2 = prompt("Введите второе число");
-if(number2 >= 1) alert("Верное число");
-
-//task2
-
-let test = true;
-(test)?console.log("+++"):console.log("----");
-
-//task3
-let day = 5;
-
-if (day >= 1 & day <= 10)alert("Первая декада");
-else if (day >= 11 & day <= 20)alert("Вторая декада");
-else alert("Третья декада");
-
-
-//task4
-let num = 71;
-let data = num;
-let array = [];
-while(num>0){
-    array.unshift(num%10);
-    if(array.length === 3) break;
-    num=num/10|0;
+function factorial(n){
+    if(n === 0 || n === 1) return n;
+    stroka += `${n} + `
+    return n*factorial(n -1 );
 }
 
-if(array.length === 2)array.unshift(0);
-
-console.log(`В числе ${data} количество сотен: ${array[0]}, десятков: ${array[1]}, единиц: ${array[2]}`);
-
+console.log(`${factorial(5)}(${stroka}1)`);
