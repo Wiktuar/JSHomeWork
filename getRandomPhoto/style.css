@@ -1,0 +1,22 @@
+.information {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+img {
+    width: 40%;
+}
+
+p {
+    height: 20px;
+    text-align: center;
+    background-color: pink;
+}
+
+button {
+    width: 60px;
+    height: 20px;
+}
